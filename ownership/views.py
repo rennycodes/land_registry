@@ -3,7 +3,6 @@ from .models import Landowner, Property
 
 # Create your views here.
 
-# ownership/views.py
 def landowner_list(request):
     landowners = Landowner.objects.all()
     return render(request, 'ownership/landowner_list.html', {'landowners': landowners})
