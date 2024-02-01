@@ -1,7 +1,7 @@
 from django import forms
-from .models import Landowner, Property
+from .models import Landowner
 
 class LandownerForm(forms.ModelForm):
     class Meta:
-        model = (Landowner, Property)
+        model = (Landowner)
         fields = ['name', 'contact_number', 'landowner', 'address']
