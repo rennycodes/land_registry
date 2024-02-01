@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Landowner, Property
+from .models import Landowner
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import LandownerForm
