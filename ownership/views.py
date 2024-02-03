@@ -25,7 +25,7 @@ def Landowner_Form(request):
         if form.is_valid():
             form.save()
             messages.success(request, f'Land Issues Created Already')
-            return redirect('ownership-home')
+            return redirect('ownership-form')
     else:
         form = LandownerForm()
     return render(request, 'ownership/ownership_form.html', {'form': form})
