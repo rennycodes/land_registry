@@ -39,3 +39,8 @@ body {
   .article-title {
     color: #444444;
   }
+
+  a.article-title:hover {
+    color: #428bca;
+    text-decoration: none;
+  }
