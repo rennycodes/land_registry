@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'ownership',
+    'ownership.apps.OwnershipConfig',
     'crispy_forms',
     'crispy_bootstrap4',
     'django.contrib.admin',
