@@ -14,7 +14,7 @@ def home(request):
     return render(request, 'ownership/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1>Blog About<h1>')
+    return render(request, 'ownership/about.html', {'title': 'About'})
 
 def landowner_list(request):
     landowners = Landowner.objects.all()
