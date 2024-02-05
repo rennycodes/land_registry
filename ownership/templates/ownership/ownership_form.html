@@ -1,3 +1,5 @@
+{% extends "ownership/base.html" %}
+{% block content %}
 {% load crispy_forms_tags %}
 <form method="POST" action="">
     {% csrf_token %}
@@ -7,3 +9,4 @@
     </fieldset>
     <button type="submit">Submit</button>
 </form>
+{% endblock content %}
