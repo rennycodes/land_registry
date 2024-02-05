@@ -7,8 +7,11 @@ from .forms import LandownerForm
 # Create your views here.
 
 def home(request):
-    return HttpResponse('<h1>Blog Home</h1>')
-
+    context = {
+        'landowners': Landowner.objects.all()
+        
+    }
+    return render(request, 'ownership/home.html', context)
 
 def landowner_list(request):
     landowners = Landowner.objects.all()
