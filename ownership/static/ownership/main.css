@@ -65,3 +65,9 @@ body {
     color: #333;
     text-decoration: none;
   }
+
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
