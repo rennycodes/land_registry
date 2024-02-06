@@ -6,4 +6,4 @@ __pycache__/
 venv/
 
 # Ignore database file
-db.sqlite3
+land_registry/db.sqlite3
