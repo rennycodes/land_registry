@@ -8,7 +8,7 @@ class Landowner(models.Model):
     address = models.CharField(max_length=255, blank=True, null=True)
     contact_number = models.CharField(max_length=20, blank=True, null=True)
     email = models.EmailField(default='Someone@tonek.com')
-    inputter_name = models.CharField(max_length=255, blank=True, null=True)
+
 
     def __str__(self):
         return self.name
