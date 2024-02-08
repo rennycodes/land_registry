@@ -9,4 +9,4 @@ class LandownerForm(forms.ModelForm):
 class LandPropertyForm(forms.ModelForm):
     class Meta:
         model = LandProperty
-        fields = ['landowner', 'coordinates', 'land_type', 'other_details', 'inputter_name']
+        fields = ['landowner', 'address', 'land_type', 'other_details']
