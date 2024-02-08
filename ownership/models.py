@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.gis.db import models
 
 # Create your models here.
 
@@ -17,7 +16,7 @@ class Landowner(models.Model):
 class LandProperty(models.Model):
     id = models.AutoField(primary_key=True)
     landowner = models.ForeignKey(Landowner, on_delete=models.CASCADE)
-    coordinates = models.PolygonField(geography=True, blank=True, null=True)
+    coordinates = models.DecimalField(max_length=255, null=True)
     land_type = models.CharField(max_length=255)
     other_details = models.TextField(blank=True, null=True)
     inputter_name = models.CharField(max_length=255, blank=True, null=True)
