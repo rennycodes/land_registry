@@ -50,7 +50,7 @@ def Landproperty_Form(request):
     if request.method == 'POST':
         form = LandPropertyForm(request.POST)
         if form.is_valid():
-            land_property = form.save()
+            form.save()
             return redirect('ownership-home')
     else:
         form = LandPropertyForm()
