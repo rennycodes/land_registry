@@ -41,7 +41,7 @@ def Landowner_Form(request):
         form = LandownerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('ownership-home')
+            return redirect('landproperty-form')
     else:
         form = LandownerForm()
     return render(request, 'ownership/ownership_form.html', {'form': form})
