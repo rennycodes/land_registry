@@ -20,8 +20,8 @@ class LandProperty(models.Model):
     address = models.CharField(max_length=255, blank=True, null=True)
     phone_number = models.CharField(max_length=20, blank=True, null=True)
     email = models.EmailField(default='Someone@tonek.com')
-    land_type = models.CharField(max_length=255)
     inputter = models.ForeignKey(User, on_delete=models.CASCADE)
+    land_type = models.CharField(max_length=255)
     other_details = models.TextField(blank=True, null=True)
     
 
