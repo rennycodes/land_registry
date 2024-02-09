@@ -1,6 +1,0 @@
-<h2>Landowners</h2>
-<ul>
-    {% for landowner in landowners %}
-        <li><a href="{% url 'property_list' landowner.id %}">{{ landowner.name }}</a></li>
-    {% endfor %}
-</ul>
