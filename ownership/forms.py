@@ -4,7 +4,7 @@ from .models import Landowner, LandProperty
 class LandownerForm(forms.ModelForm):
     class Meta:
         model = Landowner
-        fields = ['name', 'address', 'phone_number', 'email']
+        fields = ['name', 'address', 'phone_number', 'email', 'inputter']
 
 class LandPropertyForm(forms.ModelForm):
     class Meta:

@@ -16,7 +16,7 @@ class Landowner(models.Model):
         return self.name
 
 class LandProperty(models.Model):
-    landowner = models.ForeignKey(Landowner, on_delete=models.CASCADE)
+    landowner = models.ForeignKey(Landowner.name, on_delete=models.CASCADE)
     address = models.CharField(max_length=255, blank=True, null=True)
     land_type = models.CharField(max_length=255)
     other_details = models.TextField(blank=True, null=True)
