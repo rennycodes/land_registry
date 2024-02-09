@@ -16,9 +16,12 @@ class Landowner(models.Model):
         return self.name
 
 class LandProperty(models.Model):
-    landowner = models.ForeignKey(Landowner.name, on_delete=models.CASCADE)
+    landowner = models.ForeignKey(Landowner, on_delete=models.CASCADE)
     address = models.CharField(max_length=255, blank=True, null=True)
+    phone_number = models.CharField(max_length=20, blank=True, null=True)
+    email = models.EmailField(default='Someone@tonek.com')
     land_type = models.CharField(max_length=255)
+    inputter = models.ForeignKey(User, on_delete=models.CASCADE)
     other_details = models.TextField(blank=True, null=True)
     
 
