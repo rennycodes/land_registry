@@ -60,3 +60,14 @@ body {
     margin-bottom: 4px;
     border-bottom: 1px solid #e3e3e3
   }
+  
+  .article-metadata a:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .article-svg {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+  }
