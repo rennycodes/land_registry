@@ -17,7 +17,10 @@ lands = [
 # Create your views here.
 
 def home(request):
-    return render(request, 'ownership/home.html')
+    context = {
+        'lands': lands
+    }
+    return render(request, 'ownership/home.html', context)
 
 def about(request):
     return render(request, 'ownership/about.html')
