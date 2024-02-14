@@ -2,12 +2,12 @@ from django.shortcuts import render
 
 lands = [
     {
-        'Name': 'Renny',
+        'name': 'Renny',
         'location': 'ekehuan road',
         'size_of_land': '100ft by 100ft'
     },
     {
-        'Name': 'Mike',
+        'name': 'Mike',
         'location': 'Sapele road',
         'size_of_land': '1200ft by 100ft'
     }
