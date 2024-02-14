@@ -6,6 +6,10 @@
     <title></title>
 </head>
 <body>
-    <h1>Blog Home!</h1>
+    {% for land in lands %}
+        <h1>{{ land.size_of_land }}</h1>
+        <p>By {{ land.name }}</p>
+        <p>Located at {{ land.location }}</p>
+    {% endfor %}
 </body>
 </html>
