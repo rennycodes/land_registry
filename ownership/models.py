@@ -14,3 +14,8 @@ class Land(models.Model):
     Y3_coordinate = models.DecimalField(max_digits=10, decimal_places=6)
     X4_coordinate = models.DecimalField(max_digits=10, decimal_places=6)
     Y4_coordinate = models.DecimalField(max_digits=10, decimal_places=6)
+    land_type = models.CharField(max_length=50)
+    landmark = models.TextField()
+    LGA = models.CharField(max_length=100, default='Unknown')
+    state = models.CharField(max_length=100, default='Unknown')
+    size_of_land = models.DecimalField(max_length=10, decimal_places=2)
