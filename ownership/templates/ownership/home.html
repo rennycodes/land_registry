@@ -1,6 +1,8 @@
-
-{% for land in lands %}
-    <h1>{{ land.size_of_land }}</h1>
-    <p>By {{ land.name }}</p>
-    <p>Located at {{ land.location }}</p>
-{% endfor %}
+{% extends "ownership/base.html" %}
+{% block content %}
+    {% for land in lands %}
+        <h1>{{ land.size_of_land }}</h1>
+        <p>By {{ land.name }}</p>
+        <p>Located at {{ land.location }}</p>
+    {% endfor %}
+{% endblock content%}
