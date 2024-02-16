@@ -21,4 +21,4 @@ class Land(models.Model):
     LGA = models.CharField(max_length=100, default='Unknown')
     state = models.CharField(max_length=100, default='Unknown')
     size_of_land = models.CharField(max_length=50)
-    operator = models.ForeignKey(User, on_delete='PROTECT')
+    operator = models.ForeignKey(User, on_delete=models.PROTECT)
