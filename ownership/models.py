@@ -19,4 +19,4 @@ class Land(models.Model):
     landmark = models.TextField()
     LGA = models.CharField(max_length=100, default='Unknown')
     state = models.CharField(max_length=100, default='Unknown')
-    size_of_land = models.DecimalField(max_length=10, decimal_places=2)
+    size_of_land = models.CharField(max_length=50)
