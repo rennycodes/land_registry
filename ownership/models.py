@@ -4,7 +4,7 @@ from django.db import models
 class Land(models.Model):
     name = models.CharField(max_length=100)
     residential_address = models.TextField()
-    phone_number = models.CharField(max_lenght=15)
+    phone_number = models.CharField(max_length=15)
     email = models.EmailField(default='someone@someone.com')
     location = models.CharField(max_length=255)
     X1_coordinate = models.DecimalField(max_digits=10, decimal_places=6)
