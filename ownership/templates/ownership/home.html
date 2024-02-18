@@ -9,10 +9,22 @@
                 <small class="text-muted">| By {{ land.operator }}</small>
             </div>
             <h5><a class="article-title">{{ land.residential_address }}, {{ land.landmark}}</a></h5>
-            <p class="article-content">Point 1(x,y): {{land.X1_point }}, {{ land.Y1_point }}</p>
-            <p class="article-content">Point 2(x,y): {{land.X2_point }}, {{ land.Y2_point }}</p>
-            <p class="article-content">Point 3(x,y): {{land.X3_point }}, {{ land.Y3_point }}</p>
-            <p class="article-content">Point 4(x,y): {{land.X4_point }}, {{ land.Y4_point }}</p>
+
+            <p class="article-content">Point 1(x,y):
+                <small class="text-info">{{ land.X1_point }}, {{ land.Y1_point }}</small>
+            </p>
+            
+            <p class="article-content">Point 2(x,y):
+                <small class="text-info">{{ land.X2_point }}, {{ land.Y2_point }}</small>
+            </p>
+
+            <p class="article-content">Point 3(x,y):
+                <small class="text-info">{{ land.X3_point }}, {{ land.Y3_point }}</small>
+            </p>
+
+            <p class="article-content">Point 4(x,y):
+                <small class="text-info">{{ land.X4_point }}, {{ land.Y4_point }}</small>
+            </p>
         </div>
     </article>
     {% endfor %}
