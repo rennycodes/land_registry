@@ -4,11 +4,13 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Land(models.Model):
+    
     # Owner Info
     name = models.CharField(max_length=100)
     residential_address = models.TextField()
     phone_number = models.CharField(max_length=15)
     email = models.EmailField(default='someone@someone.com')
+
     # Land Info
     land_location = models.CharField(max_length=255)
     X1_point = models.DecimalField(max_digits=20, decimal_places=15)
