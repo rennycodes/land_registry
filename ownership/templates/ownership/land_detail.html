@@ -1,29 +1,29 @@
 {% extends "ownership/base.html" %}
 {% block content %}
     <article class="media content-section">
-        <img class="rounded-circle article-img" src="{{ land.operator.profile.image.url }}">
+        <img class="rounded-circle article-img" src="{{ object.operator.profile.image.url }}">
         <div class="media-body">
             <div class="article-metadata">
-                <h4><a class="mr-2">{{ land.name }}</a></h4>
-                <small class="text-muted">{{ land.phone_number }}</small>
-                <small class="text-muted">| By {{ land.operator }}</small>
+                <h4><a class="mr-2">{{ object.name }}</a></h4>
+                <small class="text-muted">{{ object.phone_number }}</small>
+                <small class="text-muted">| By {{ object.operator }}</small>
             </div>
-            <h5><a class="article-title">{{ land.residential_address }}, {{ land.landmark}}</a></h5>
+            <h5><a class="article-title">{{ object.residential_address }}, {{ object.landmark}}</a></h5>
 
             <p class="article-content">Point 1(x,y):
-                <small class="text-info">{{ land.X1_point }}, {{ land.Y1_point }}</small>
+                <small class="text-info">{{ object.X1_point }}, {{ object.Y1_point }}</small>
             </p>
             
             <p class="article-content">Point 2(x,y):
-                <small class="text-info">{{ land.X2_point }}, {{ land.Y2_point }}</small>
+                <small class="text-info">{{ object.X2_point }}, {{ object.Y2_point }}</small>
             </p>
 
             <p class="article-content">Point 3(x,y):
-                <small class="text-info">{{ land.X3_point }}, {{ land.Y3_point }}</small>
+                <small class="text-info">{{ object.X3_point }}, {{ object.Y3_point }}</small>
             </p>
 
             <p class="article-content">Point 4(x,y):
-                <small class="text-info">{{ land.X4_point }}, {{ land.Y4_point }}</small>
+                <small class="text-info">{{ object.X4_point }}, {{ object.Y4_point }}</small>
             </p>
         </div>
     </article>
