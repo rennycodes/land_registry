@@ -2,6 +2,7 @@
 {% block content %}
     {% for land in lands %}
     <article class="media content-section">
+        <img class="rounded-circle article-img" src="{{ land.operator.profile.image.url }}">
         <div class="media-body">
             <div class="article-metadata">
                 <h4><a class="mr-2">{{ land.name }}</a></h4>
