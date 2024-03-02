@@ -3,7 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (ListView,
                                   DetailView,
                                   CreateView,
-                                  UpdateView)
+                                  UpdateView,
+                                  DeleteView)
 from .models import Land
 
 # Create your views here.
@@ -53,6 +54,15 @@ class LandUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         form.instance.operator = self.request.user
         return super().form_valid(form)
     
+    def test_func(self):
+        land = self.get_object()
+        if self.request.user == land.operator:
+            return True
+        return False
+
+class LandDeleteView(DeleteView):
+    model = Land
+
     def test_func(self):
         land = self.get_object()
         if self.request.user == land.operator:
