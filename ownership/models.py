@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 class Land(models.Model):
@@ -31,4 +32,7 @@ class Land(models.Model):
     
     def __str__(self):
         return self.land_location
+    
+    def get_absolute_url(self):
+        return reverse('land-detail', kwargs={'pk': self.pk})
     
