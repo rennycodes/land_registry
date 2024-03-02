@@ -62,6 +62,7 @@ class LandUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class LandDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Land
+    success_url = '/'
 
     def test_func(self):
         land = self.get_object()
