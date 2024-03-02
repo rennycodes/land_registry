@@ -20,7 +20,7 @@ class LandListView(ListView):
     template_name = 'ownership/home.html' #<app>/<model>_<viewtype>.html
     context_object_name = 'lands'
     ordering = ['-date_created']
-    paginate_by = 1
+    paginate_by = 2
 
 class LandDetailView(DetailView):
     model = Land
