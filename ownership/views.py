@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.models import User
 from django.views.generic import (ListView,
                                   DetailView,
                                   CreateView,
@@ -21,6 +22,18 @@ class LandListView(ListView):
     context_object_name = 'lands'
     ordering = ['-date_created']
     paginate_by = 2
+
+class UserLandListView(ListView):
+    model = Land
+    template_name = 'ownership/user_lands.html' #<app>/<model>_<viewtype>.html
+    context_object_name = 'lands'
+    ordering = ['-date_created']
+    paginate_by = 2
+
+    def get_query_set(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return Land.objects.filter(operator=user).ordery_by('-date_posted')
+
 
 class LandDetailView(DetailView):
     model = Land
