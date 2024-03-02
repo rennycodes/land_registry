@@ -23,12 +23,18 @@ class LandDetailView(DetailView):
 
 class LandCreateView(CreateView):
     model = Land
-    field = ['land_location', 'X1_point', 'Y1_point',
-             'X2_point', 'Y2_point',
-             'X3_point', 'Y3_point',
-             'X4_point', 'Y4_point',
-             'land_type', 'landmark',
-             'LGA', 'state', 'size_of_land',]
+    fields = ['name', 'residential_address',
+              'phone_number', 'email',
+              'land_location', 'X1_point', 'Y1_point',
+              'X2_point', 'Y2_point',
+              'X3_point', 'Y3_point',
+              'X4_point', 'Y4_point',
+              'land_type', 'landmark',
+              'LGA', 'state', 'size_of_land',]
+    
+    def form_valid(self, form):
+        form.instance.operator = self.request.user
+        return super().form_valid(form)
 
 def about(request):
     return render(request, 'ownership/about.html', {'title': 'About'})

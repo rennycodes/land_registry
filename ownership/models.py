@@ -31,3 +31,4 @@ class Land(models.Model):
     
     def __str__(self):
         return self.land_location
+    
