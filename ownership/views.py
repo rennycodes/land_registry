@@ -32,7 +32,7 @@ class UserLandListView(ListView):
 
     def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
-        return Land.objects.filter(operator=user).ordery_by('-date_posted')
+        return Land.objects.filter(operator=user).order_by('-date_posted')
 
 
 class LandDetailView(DetailView):
