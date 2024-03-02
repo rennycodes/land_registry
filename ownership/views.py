@@ -60,7 +60,7 @@ class LandUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             return True
         return False
 
-class LandDeleteView(DeleteView):
+class LandDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Land
 
     def test_func(self):
