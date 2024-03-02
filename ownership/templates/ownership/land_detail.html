@@ -7,6 +7,12 @@
                 <h4><a class="mr-2">{{ object.name }}</a></h4>
                 <small class="text-muted">{{ object.phone_number }}</small>
                 <small class="text-muted">| By {{ object.operator }}</small>
+                {% if object.operator == user %}
+                    <div>
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'land-update' object.id %}">Update</a>
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'land-delete' object.id %}">Delete</a>
+                    </div>
+                {% endif %}
             </div>
             <h5><a class="article-title">{{ object.residential_address }}, {{ object.landmark}}</a></h5>
 
