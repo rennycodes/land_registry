@@ -30,7 +30,7 @@ class UserLandListView(ListView):
     ordering = ['-date_created']
     paginate_by = 2
 
-    def get_query_set(self):
+    def get_queryset(self):
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Land.objects.filter(operator=user).ordery_by('-date_posted')
 
