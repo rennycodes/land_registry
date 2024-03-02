@@ -6,7 +6,7 @@
             <div class="article-metadata">
                 <h4><a class="mr-2">{{ object.name }}</a></h4>
                 <small class="text-muted">{{ object.phone_number }}</small>
-                <small class="text-muted">| By {{ object.operator }}</small>
+                <a href="{% url 'user-lands' object.operator.username %}" class="text-muted">By {{ object.operator }}</a>
                 {% if object.operator == user %}
                     <div>
                         <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'land-update' object.id %}">Update</a>
