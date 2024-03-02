@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import (ListView,
                                   DetailView,
                                   CreateView,
@@ -38,7 +38,7 @@ class LandCreateView(LoginRequiredMixin, CreateView):
         form.instance.operator = self.request.user
         return super().form_valid(form)
 
-class LandUpdateView(LoginRequiredMixin, UpdateView):
+class LandUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Land
     fields = ['name', 'residential_address',
               'phone_number', 'email',
@@ -52,6 +52,12 @@ class LandUpdateView(LoginRequiredMixin, UpdateView):
     def form_valid(self, form):
         form.instance.operator = self.request.user
         return super().form_valid(form)
+    
+    def test_func(self):
+        land = self.get_object()
+        if self.request.user == land.operator:
+            return True
+        return False
 
 def about(request):
     return render(request, 'ownership/about.html', {'title': 'About'})
