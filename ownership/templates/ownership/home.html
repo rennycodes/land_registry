@@ -7,7 +7,7 @@
                 <div class="article-metadata">
                     <h4><a class="mr-2" href="{% url 'land-detail' land.id %}">{{ land.operator }}</a></h4>
                     <small class="text-muted">{{ land.phone_number }}</small>
-                    <a href="{% url 'user-lands' land.operator.username %}" class="text-muted">By {{ land.name }}</a>
+                    <a href="{% url 'user-lands' land.operator.username %}" class="text-muted">{{ land.name }}</a>
                 </div>
                 <h5><a class="article-title">{{ land.residential_address }}, {{ land.landmark}}</a></h5>
 
