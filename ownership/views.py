@@ -86,3 +86,4 @@ class LandDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'ownership/about.html', {'title': 'About'})
+
